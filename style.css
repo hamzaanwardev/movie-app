@@ -92,3 +92,18 @@ main {
 .movie-info span.green {
     color: red;
 }
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+
+}
+.movie:hover .overview {
+    transform: translateY(0);
+}
