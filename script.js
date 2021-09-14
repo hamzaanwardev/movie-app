@@ -25,10 +25,10 @@ function showMovies (movies) {
         movieEl.classList.add('movie');
         movie.innerHTML = `
         <div class="movie">
-        <img src="images/kevin-mueller-8F9cZvZyU7Q-unsplash.jpg" alt="">
+        <img src="${IMG_PATH + poster_path}" alt="${title}">
         <div class="movie-info">
-            <h3>Movies Title</h3>
-            <span class="green">9.8</span>
+            <h3>${title}</h3>
+            <span class="green">${vote_average}</span>
         </div>
         <div class="overview">
             <h3>OverView</h3>
@@ -37,6 +37,18 @@ function showMovies (movies) {
     </div>
         `
     })
+}
+
+function getClassByRate (vote) {
+    if(vote >= 8) {
+        return 'green'
+    }else if (vote >= 5) {
+        return 'orange'
+    }else {
+        return 'red'
+    }
+
+    }
 }
 
 form.addEventListener('submit', (e) => {
